@@ -1,0 +1,9 @@
+body {font-family:sans-serif;}
+h1, h2, th {color:green;}
+@font-face {color:green;}
+.oddrow {background-color: lightblue;
+        color:purple}
+.evenrow {background-color: lightcoral;
+        color:blue}
+h1 {font-size: 4em;}
+h2 {font-size: 2em}
