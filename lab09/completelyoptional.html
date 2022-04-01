@@ -19,12 +19,16 @@
             .flexbox2 {
                 display: flex;
             }
+            .flexbox3 {
+                display: flex;
+                flex-direction:column;
+                flex:4;
+                padding: 50px;
+            }
             .skillsbox {
                 display: flex;
-                flex:4;
                 justify-content: space-evenly;
                 text-align: center;
-                padding: 50px;
             }
             .otherbox {
                 flex:1;
@@ -32,6 +36,9 @@
                 color: white;
                 border-radius: 30px;
                 padding: 10px;
+            }
+            .paragraph {
+                flex:1;
             }
         </style>
     </head>
@@ -43,32 +50,37 @@
         </nav>
         <link rel="styles" href="styles.css">
         <h2 class="techskills">Technical Skills</h2>
-        <p>My goal is focused on the Front-End Web Development for now. Thus, I will work hard to develop my technical skills on Web Development.<br>
-        Therefore, there is a lot of chances to develop my technical skills in various ways.</p>
         
         <div class="flexbox2">
-            <div class="skillsbox">
-                <div>
-                    <img src="../images/html.png" class="html" alt="html" style="width: 30px; height: 30px;">
-                    <p>HTML</p>
+            <div class="flexbox3">
+                <div class="paragraph">
+                    <p>My goal is focused on the Front-End Web Development for now. Thus, I will work hard to develop my technical skills on Web Development.
+                        Therefore, there is a lot of chances to develop my technical skills in various ways.</p>
                 </div>
-                <div>
-                    <img src="../images/css.png" class="css" alt="css" style="width: 30px; height: 30px;">
-                    <p>CSS</p>
-                </div>
-                <div>
-                    <img src="../images/python.png" class="python" alt="python" style="width: 30px; height: 30px;">
-                    <p>Python</p>
-                </div>
-                <div>
-                    <img src="../images/excel.png" class="excel" alt="excel" style="width: 30px; height: 30px;">
-                    <p>Excel</p>
-                </div>
-                <div>
-                    <img src="../images/word.png" class="word" alt="word" style="width: 30px; height: 30px;">
-                    <p>Word</p>
+                <div class="skillsbox">
+                    <div>
+                        <img src="../images/html.png" class="html" alt="html" style="width: 30px; height: 30px;">
+                        <p>HTML</p>
+                    </div>
+                    <div>
+                        <img src="../images/css.png" class="css" alt="css" style="width: 30px; height: 30px;">
+                        <p>CSS</p>
+                    </div>
+                    <div>
+                        <img src="../images/python.png" class="python" alt="python" style="width: 30px; height: 30px;">
+                        <p>Python</p>
+                    </div>
+                    <div>
+                        <img src="../images/excel.png" class="excel" alt="excel" style="width: 30px; height: 30px;">
+                        <p>Excel</p>
+                    </div>
+                    <div>
+                        <img src="../images/word.png" class="word" alt="word" style="width: 30px; height: 30px;">
+                        <p>Word</p>
+                    </div>
                 </div>
             </div>
+
             <div class="otherbox">
                 <header><h2>Other Skills</h2></header>
                 <p>
