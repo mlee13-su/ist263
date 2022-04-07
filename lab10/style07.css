@@ -1,0 +1,29 @@
+body {background-color: #90ee90;
+    color:#0000ff;}
+a:hover {color:#d2691e}
+a:visited {color:#f5deb3}
+h1,h2 {color:#008080}
+nav {
+    padding:20px;
+    background-color: #20b2aa;
+    color:#800080;
+    margin-bottom:30px;
+}
+nav a {color:#663399;}
+nav a:hover {background-color: #4169e1;}
+.quote {float: right;}
+.img1 {display: block; margin-left: auto; margin-right: auto; margin-bottom: 30px; max-width: 100%;}
+
+.part1 {display: flex;}
+.address {flex: 1; background-color: lightskyblue; padding:30px; border-radius: 1em; margin-top: 10px; margin-bottom: 10px;}
+.link {flex: 1; background-color: lightslategray; padding:30px; border-radius: 1em; margin-top: 10px; margin-bottom: 10px;}
+.part2 {display: flex; flex-wrap: wrap;}
+.form {flex: 1; background-color: mediumaquamarine; padding:30px; border-radius: 1em; margin-top: 10px; margin-bottom: 10px; flex-wrap: wrap;}
+.map {flex: 1; background-color: mediumvioletred; padding:30px; border-radius: 1em; margin-top: 10px; margin-bottom: 10px; flex-wrap: wrap;}
+@media only screen and (max-width: 600px) {
+    nav a{
+        display: flex;
+        flex-direction: column;
+    }
+    span{display: none;}
+}
