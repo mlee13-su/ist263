@@ -1,6 +1,9 @@
 body {background-color: whitesmoke;
     color:#990017;}
-a:hover {color:#000000}
+a:hover {
+    background-color: #E0FFFF;
+    color:#000000
+}
 a:visited {color:lightseagreen}
 h1,h2 {color:#404040}
 nav {
@@ -16,7 +19,7 @@ nav a:hover {background-color: #B6BFC8;}
 
 .part1 {display: flex;}
 .address {flex: 1; background-color: lightskyblue; padding:30px; border-radius: 1em; margin-top: 10px; margin-bottom: 10px;}
-.link {flex: 1; background-color: lightslategray; padding:30px; border-radius: 1em; margin-top: 10px; margin-bottom: 10px;}
+.link {flex: 1; background-color: #DEDEDE; padding:30px; border-radius: 1em; margin-top: 10px; margin-bottom: 10px;}
 .part2 {display: flex; flex-wrap: wrap;}
 .form {flex: 1; background-color: lightpink; padding:30px; border-radius: 1em; margin-top: 10px; margin-bottom: 10px; flex-wrap: wrap;}
 .map {flex: 1; background-color: lightsalmon; padding:30px; border-radius: 1em; margin-top: 10px; margin-bottom: 10px; flex-wrap: wrap;}
