@@ -1,15 +1,15 @@
 body {background-color: whitesmoke;
-    color:#0000ff;}
+    color:#990017;}
 a:hover {color:lightgoldenrodyellow}
 a:visited {color:lightseagreen}
 h1,h2 {color:#FFB6C1}
 nav {
     padding:20px;
-    background-color: whitesmoke;
-    color: lightpink;
+    background-color: #E0FFFF;
+    color:#990017;
     margin-bottom:30px;
 }
-nav a {color:lightpink;}
+nav a {color:#990017;}
 nav a:hover {background-color: lightsteelblue;}
 .quote {float: right;}
 .img1 {display: block; margin-left: auto; margin-right: auto; margin-bottom: 30px; max-width: 100%;}
