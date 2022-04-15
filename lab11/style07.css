@@ -1,6 +1,6 @@
 body {background-color: whitesmoke;
     color:#990017;}
-a:hover {color:lightgoldenrodyellow}
+a:hover {color:#000000}
 a:visited {color:lightseagreen}
 h1,h2 {color:#FFB6C1}
 nav {
@@ -10,7 +10,7 @@ nav {
     margin-bottom:30px;
 }
 nav a {color:#990017;}
-nav a:hover {background-color: lightsteelblue;}
+nav a:hover {background-color: #61000D;}
 .quote {float: right;}
 .img1 {display: block; margin-left: auto; margin-right: auto; margin-bottom: 30px; max-width: 100%;}
 
