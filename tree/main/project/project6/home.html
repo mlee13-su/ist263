@@ -10,7 +10,6 @@
             display: block;
             margin-left: auto;
             margin-right: auto;
-            width: 50%;
         }
         nav a {
             color: white;
@@ -24,12 +23,32 @@
             display: flex;
             justify-content: center;
         }
+        .flexbox {
+            display: flex;
+            justify-content: center;
+        }
+        .flexbox h1 {
+            margin: 10px;
+            text-align: center;
+        }
+        .homeimage {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        p {text-align: center;}
+        footer {
+            color: white;
+            background-color: #4c4c4c;
+            padding: 10px;
+            
+        }
     </style>
 </head>
 <body>
     <header>
         <a href="home.html">
-            <img src="images/melodinglogo.png" class="logo" alt="meloding" width="171" height="46"></a>
+            <img src="../images/melodinglogo.png" class="logo" alt="meloding" width="171" height="46"></a>
     </header>
 
     <nav>
@@ -38,11 +57,13 @@
         <a href="review.html"> REVIEW </a>
     </nav>
 
-    <h1>Hungry? Here's the menu!</h1>
-    <h1>–</h1>
-    <h1>Always 100% Organic, 100% Best Effort</h1>
+    <div class="flexbox">
+        <h1>Hungry?<br> Here's the menu!</h1>
+        <h1>–</h1>
+        <h1>Always 100% Organic,<br> 100% Best Effort</h1>
+    </div>
 
-    <img src="images/homeimage.JPEG" class="homeimage" alt="homeimage" width="250" height="250">
+    <img src="../images/homeimage.JPEG" class="homeimage" alt="homeimage" width="250" height="250">
     <p>Hello there!<br>
     I am Melody Lee who will serve you as a<br>
     professional chef today :)<br>
@@ -62,13 +83,13 @@
         </div>
         <div>
             <a href="https://www.instagram.com/myeunlee324/">
-                <img src="images/instagram.png" class="instagram" alt="instagram" width="50" height="50"></a>
+                <img src="../images/instagram.png" class="instagram" alt="instagram" width="50" height="50"></a>
             <a href="https://www.facebook.com/leemel323/">
-                <img src="images/facebook.png" class="facebook" alt="facebook" width="50" height="50"></a>
+                <img src="../images/facebook.png" class="facebook" alt="facebook" width="50" height="50"></a>
         </div>
         <div>
             <a href="home.html">
-                <img src="images/melodinglogo.png" class="melodinglogo" alt="melodinglogo" width="171" height="46"></a>
+                <img src="../images/melodinglogo.png" class="melodinglogo" alt="melodinglogo" width="171" height="46"></a>
         </div>
     </footer>
 </body>
