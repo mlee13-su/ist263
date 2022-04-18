@@ -40,9 +40,12 @@
         footer {
             color: white;
             background-color: #4c4c4c;
-            padding: 10px;
-            
+            padding: 10px; 
         }
+        .flexbox2 {display: flex;}
+        .start {justify-content: flex-start;}
+        .middle {justify-content: center;}
+        .end {justify-content: flex-end;}
     </style>
 </head>
 <body>
@@ -75,19 +78,19 @@
     I will do my best and put all my effort to<br>
     prepare the best dish ever for you!</p>
     
-    <footer>
-        <div>
+    <footer class="flexbox2">
+        <div class="start">
             <span>CONTACT</span>
             <span>myeunlee0323@gmail.com</span>
             <span>copyright &copy; Meloding 2022</span>
         </div>
-        <div>
+        <div class="middle">
             <a href="https://www.instagram.com/myeunlee324/">
                 <img src="../images/instagram.png" class="instagram" alt="instagram" width="50" height="50"></a>
             <a href="https://www.facebook.com/leemel323/">
                 <img src="../images/facebook.png" class="facebook" alt="facebook" width="50" height="50"></a>
         </div>
-        <div>
+        <div class="end">
             <a href="home.html">
                 <img src="../images/melodinglogo.png" class="melodinglogo" alt="melodinglogo" width="171" height="46"></a>
         </div>
