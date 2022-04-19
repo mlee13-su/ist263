@@ -4,12 +4,141 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&display=swap" rel="stylesheet">
     <title>Review</title>
+    <style>
+        .box1 {
+            display: flex;
+            background-color: gainsboro;
+            justify-content: center;
+            width: 300px;
+            margin: auto;
+            padding: 1em;
+            border-radius: 1em;
+            margin-top: 3em;
+            margin-bottom: 2em;
+        }
+        .review {
+            display: flex;
+            flex-direction: column;
+            border: 2px solid #949494;
+            justify-content: center;
+            width: 500px;
+            margin: auto;
+            padding: 2em;
+            border-radius: 1em;
+        }
+        .rating {
+            display: inline-block;
+            position: relative;
+            height: 50px;
+            line-height: 50px;
+            font-size: 50px;
+        }
+        .rating label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            cursor: pointer;
+        }
+        .rating label:last-child {
+            position: static;
+        }
+        .rating label:nth-child(1) {
+            z-index: 5;
+        }
+        .rating label:nth-child(2) {
+            z-index: 4;
+        }
+        .rating label:nth-child(3) {
+            z-index: 3;
+        }
+        .rating label:nth-child(4) {
+            z-index: 2;
+        }
+        .rating label:nth-child(5) {
+            z-index: 1;
+        }
+        .rating label input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+        .rating label .icon {
+            float: left;
+            color: transparent;
+        }
+        .rating label:last-child .icon {
+            color: #000000;
+        }
+        .rating:not(:hover) label input:checked ~ .icon,
+        .rating:hover label:hover input ~ .icon {
+            color: #f0ad27;
+        }
+        .rating label input:focus:not(:checked) ~ .icon:last-child {
+            color: #000000;
+            text-shadow: 0 0 5px #f0ad27;
+        }
+        .name {
+            margin-top: 1em;
+        }
+        .nameinput {
+            margin-top: 1em;
+        }
+        .textbox {
+            margin-top: 2em;
+            height: 200px;
+            width: 400px;
+        }
+        .button {
+            background-color: #ffca61;
+            padding: 1.2em;
+            border-radius: 1em;
+            margin-top: 1em;
+            margin-left: 30em;
+            border: 0;
+        }
+        .example {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 3em;
+            margin-bottom: 5em;
+        }
+        .example1 {
+            color: white;
+            background-color: #009EFE;
+            padding: 1em;
+            text-align: center;
+            border-radius: 1em;
+            width: 200px;
+        }
+        .example2 {
+            color: white;
+            background-color: #009b50;
+            padding: 1em;
+            text-align: center;
+            border-radius: 1em;
+            width: 200px;
+        }
+        .example3 {
+            color: white;
+            background-color: #a20084;
+            padding: 1em;
+            text-align: center;
+            border-radius: 1em;
+            width: 200px;
+        }
+    </style>
 </head>
 <body>
     <header>
         <a href="home.html">
-            <img src="images/melodinglogo.png" class="logo" alt="meloding" width="171" height="46"></a>
+            <img src="../images/melodinglogo.png" class="logo" alt="meloding" width="171" height="46"></a>
     </header>
 
     <nav>
@@ -18,96 +147,100 @@
         <a href="review.html"> REVIEW </a>
     </nav>
 
-    <div>
+    <div class="box1">
         How was the food?<br>
         Please leave a review!
     </div>
 
-    <form class="rating">
-        <label>
-          <input type="radio" name="stars" value="1" />
-          <span class="icon">★</span>
-        </label>
-        <label>
-          <input type="radio" name="stars" value="2" />
-          <span class="icon">★</span>
-          <span class="icon">★</span>
-        </label>
-        <label>
-          <input type="radio" name="stars" value="3" />
-          <span class="icon">★</span>
-          <span class="icon">★</span>
-          <span class="icon">★</span>   
-        </label>
-        <label>
-          <input type="radio" name="stars" value="4" />
-          <span class="icon">★</span>
-          <span class="icon">★</span>
-          <span class="icon">★</span>
-          <span class="icon">★</span>
-        </label>
-        <label>
-          <input type="radio" name="stars" value="5" />
-          <span class="icon">★</span>
-          <span class="icon">★</span>
-          <span class="icon">★</span>
-          <span class="icon">★</span>
-          <span class="icon">★</span>
-        </label>
-      </form>
+    <div class="review">
+        <form class="rating">
+            <label>
+            <input type="radio" name="stars" value="1" />
+            <span class="icon">★</span>
+            </label>
+            <label>
+            <input type="radio" name="stars" value="2" />
+            <span class="icon">★</span>
+            <span class="icon">★</span>
+            </label>
+            <label>
+            <input type="radio" name="stars" value="3" />
+            <span class="icon">★</span>
+            <span class="icon">★</span>
+            <span class="icon">★</span>   
+            </label>
+            <label>
+            <input type="radio" name="stars" value="4" />
+            <span class="icon">★</span>
+            <span class="icon">★</span>
+            <span class="icon">★</span>
+            <span class="icon">★</span>
+            </label>
+            <label>
+            <input type="radio" name="stars" value="5" />
+            <span class="icon">★</span>
+            <span class="icon">★</span>
+            <span class="icon">★</span>
+            <span class="icon">★</span>
+            <span class="icon">★</span>
+            </label>
+        </form>
 
-      <form class="reviewname">
-        <label for="reviewername">Your Name/Nickname</label>
-        <input type="text" name="reviewername" id="reviewername"><br>
-        <label for="reviewtext">Your Review</label>
-        <textarea name="reviewtext" id="reviewtext"></textarea>
-      </form>
+        <form class="reviewname">
+            <label for="reviewername" class="name">Your Name/Nickname</label>
+            <input type="text" class="nameinput" name="reviewername" id="reviewername"><br>
+            <label for="reviewtext">Your Review</label>
+            <textarea class="textbox" name="reviewtext" id="reviewtext"></textarea>
+            <button class="button" name="submit">SUBMIT</button>
+        </form>
+    </div>
+    <div class="example">
+        <div class="example1">
+            <div>
+                I really enjoyed the<br>
+                lasagna! It could be a<br>
+                bit oily, but the<br>
+                jalapenos just clean<br>
+                out this oily!<br><br>
+            </div>
+            <div>By KH</div>
+        </div>
+        <div class="example2">
+            <div>
+                Gambas al ajilo from<br>
+                Melody is always great!<br>
+                I hope to try other food<br>
+                for next time! Love ya<br><br>
+            </div>
+            <div>By Jimin</div>
+        </div>
+        <div class="example3">
+            <div>
+                Even I don't like Kimchi<br>
+                that much, I really liked<br>
+                Kimchi Fried Rice by<br>
+                Melody :) Thank you for<br>
+                inviting!<br><br>
+            </div>
+            <div>By Grace</div>
+        </div>
+    </div>
     
-    <div class="example1">
-        <div>
-            I really enjoyed the<br>
-            lasagna! It could be a<br>
-            bit oily, but the<br>
-            jalapenos just clean<br>
-            out this oily!
-        </div>
-        <div>By KH</div>
-    </div>
-    <div class="example2">
-        <div>
-            Gambas al ajilo from<br>
-            Melody is always great!<br>
-            I hope to try other food<br>
-            for next time! Love ya<br>
-        </div>
-        <div>By Jimin</div>
-    </div>
-    <div class="example3">
-        <div>
-            Even I don't like Kimchi<br>
-            that much, I really liked<br>
-            Kimchi Fried Rice by<br>
-            Melody :) Thank you for<br>
-            inviting!
-        </div>
-        <div>By Grace</div>
-    </div>
-    
-    <footer>
-        <div>
-            <span>CONTACT</span>
-            <span>myeunlee0323@gmail.com</span>
+    <footer class="flexbox2">
+        <div class="start">
+            <span>CONTACT<br></span>
+            <span>myeunlee0323@gmail.com<br></span>
             <span>copyright &copy; Meloding 2022</span>
         </div>
-        <div>
+        <div class="middle">
             <a href="https://www.instagram.com/myeunlee324/">
-                <img src="images/instagram.png" class="instagram" alt="instagram" width="50" height="50"></a>
+                <img src="../images/instagram.png" class="instagram" alt="instagram" width="25" height="25"></a>
             <a href="https://www.facebook.com/leemel323/">
-                <img src="images/facebook.png" class="facebook" alt="facebook" width="50" height="50"></a>
+                <img src="../images/facebook.png" class="facebook" alt="facebook" width="25" height="25"></a>
         </div>
-        <div>
+        <div class="end">
             <a href="home.html">
-                <img src="images/melodinglogo.png" class="melodinglogo" alt="melodinglogo" width="171" height="46"></a>
+                <img src="../images/melodinglogo.png" class="melodinglogo" alt="melodinglogo" width="171" height="46"></a>
         </div>
     </footer>
 </body>
