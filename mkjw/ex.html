@@ -6,8 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="stylesh.css">
+    <style>
+        #t {
+            border: none;
+        }
+    </style>
+    <script>
+        function rightAnswer() {
+            document.getElementById("right").style.color = "green";
+        }
+        function wrongAnswer() {
+            document.getElementById("wrong").style.color = "red";
+        }
+    </script>
 </head>
 <body>
-    <!---->
+    <table class="t">
+        <tr>
+            <td>Love</td>
+            <td>Cute</td>
+            <td>Tree</td>
+        </tr>
+        <tr>
+            <td>Stay</td>
+            <td>Pond</td>
+            <td>Will</td>
+        </tr>
+        <tr>
+            <td id="right" onclick="rightAnswer();">Mark</td>
+            <td id="wrong" onclick="wrongAnswer();">Exam</td>
+            <td>Hand</td>
+        </tr>
+    </table>
 </body>
 </html>
