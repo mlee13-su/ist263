@@ -13,7 +13,7 @@
         .box1 {
             display: flex;
             flex-wrap: wrap;
-            background-color: gainsboro;
+            background-color: #ffffff6c;
             justify-content: center;
             width: 300px;
             margin: auto;
@@ -22,16 +22,37 @@
             margin-top: 3em;
             margin-bottom: 2em;
         }
+
+        .bg {
+            animation: slide 3s ease-in-out infinite alternate;
+            background-image: linear-gradient(-60deg, rgb(243, 197, 197) 50%, rgb(232, 195, 248) 50%, rgb(197, 209, 249) 50%);
+            bottom: 0;
+            left: -50%;
+            opacity: .5;
+            position: fixed;
+            right: -50%;
+            top: 0;
+            z-index: -1;
+        }
+        .bg2 {
+            animation-direction: alternate-reverse;
+            animation-duration: 4s;
+        }
+        .bg3 {animation-duration: 5s;}
+        @keyframes slide {
+        0% {transform: translateX(-25%);}
+        100% {transform: translateX(25%);}
+        }
+
         .review {
             display: flex;
             flex-wrap: wrap;
-            flex-direction: column;
-            border: 2px solid #949494;
             justify-content: center;
-            width: 405px;
+            width: 300px;
             margin: auto;
-            padding: 2em;
+            padding: 3em;
             border-radius: 1em;
+            background-color: #ffffff6c;
         }
         .rating {
             display: inline-block;
@@ -91,18 +112,21 @@
         }
         .nameinput {
             margin-top: 1em;
+            background-color: #ffffff6c;
+            width: 120px;
         }
         .textbox {
             margin-top: 2em;
             height: 200px;
-            width: 400px;
+            width: 300px;
+            background-color: #ffffff6c;
         }
         .button {
             background-color: #ffca61;
             padding: 1.2em;
             border-radius: 1em;
             margin-top: 1em;
-            margin-left: 20em;
+            margin-left: 8em;
             border: 0;
         }
         .example {
@@ -157,6 +181,10 @@
         <a href="review.html"> REVIEW </a>
     </div>
 
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+
     <div class="box1">
         How was the food?<br>
         Please leave a review!
@@ -201,7 +229,7 @@
             <input type="text" class="nameinput" name="reviewername" id="reviewername"><br>
             <label for="reviewtext">Your Review</label>
             <textarea class="textbox" name="reviewtext" id="reviewtext"></textarea>
-            <button class="button" name="submit">SUBMIT</button>
+            <button class="button" name="submit" style= "font-family: 'Noto Sans', sans-serif;">SUBMIT</button>
         </form>
     </div>
     <div class="example">
@@ -239,7 +267,7 @@
     <footer class="flexbox2">
         <div class="start">
             <span>CONTACT<br></span>
-            <span>myeunlee0323@gmail.com<br></span>
+            <span><a href="mailto:myeunlee0323@gmail.com">myeunlee0323@gmail.com</a><br></span>
             <span>copyright &copy; Meloding 2022</span>
         </div>
         <div class="middle">
