@@ -1,211 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&display=swap" rel="stylesheet">
     <title>Italian</title>
     <style>
-        .dish1 {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
+      .bg {
+            animation: slide 3s ease-in-out infinite alternate;
+            background-image: linear-gradient(-60deg, #f2c6bc 50%, #f4d5bf 50%, #d3deef 50%);
+            bottom: 0;
+            left: -50%;
+            opacity: .5;
+            position: fixed;
+            right: -50%;
+            top: 0;
+            z-index: -1;
         }
-        .potatosoup {
-            margin-top: 2em;
-            margin-bottom: 2em;
+        .bg2 {
+            animation-direction: alternate-reverse;
+            animation-duration: 4s;
         }
-        .text1 {
-            margin-top: auto;
-            margin-bottom: auto;
-            text-align: center;
-        }
-        .dish2 {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-        }
-        .caprese {
-            margin-top: 2em;
-            margin-bottom: 2em;
-        }
-        .text2 {
-            margin-top: auto;
-            margin-bottom: auto;
-            text-align: center;
-        }
-        .dish3 {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-        }
-        .garnish {
-            margin-top: 2em;
-            margin-bottom: 2em;
-        }
-        .text3 {
-            margin-top: auto;
-            margin-bottom: auto;
-            text-align: center;
-        }
-        .dish4 {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-        }
-        .lasagna {
-            margin-top: 2em;
-            margin-bottom: 2em;
-        }
-        .text4 {
-            margin-top: auto;
-            margin-bottom: auto;
-            text-align: center;
-        }
-        .dish5 {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-        }
-        .madeleine {
-            margin-top: 2em;
-            margin-bottom: 2em;
-        }
-        .text5 {
-            margin-top: auto;
-            margin-bottom: auto;
-            text-align: center;
-        }
-        .dish6 {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-        }
-        .lemonade {
-            margin-top: 2em;
-        }
-        .orangeade {
-            margin-top: 2em;
-        }
-        .text6 {
-            text-align: center;
-            margin-top: auto;
-            margin-bottom: auto;
-        }
-        html {
-            height:100%;
+        .bg3 {animation-duration: 5s;}
+        @keyframes slide {
+        0% {transform: translateX(-25%);}
+        100% {transform: translateX(25%);}
         }
 
-        body {
-            margin:0;
-        }
-    </style>
+      * {
+        box-sizing: border-box;
+      }
+  
+      img {
+        vertical-align: middle;
+      }
+  
+      .container {
+        position: relative;
+      }
+  
+      .mySlides {
+        display: none;
+        justify-content: space-evenly;
+        background-color: white;
+      }
+  
+      .cursor {
+        cursor: pointer;
+      }
+  
+      .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 40%;
+        width: auto;
+        padding: 16px;
+        margin-top: -50px;
+        color: black;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        -webkit-user-select: none;
+      }
+  
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+  
+      .prev:hover, .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+  
+      .numbertext {
+        color: black;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+  
+      .caption-container {
+        text-align: center;
+        background-color: #222;
+        padding: 2px 16px;
+        color: white;
+      }
+  
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      .row {
+        text-align: center;
+      }
+  
+      .demo {
+        opacity: 0.6;
+      }
+  
+      .active, .demo:hover {
+        opacity: 1;
+      }
+      .mySlides img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+  </style>
 </head>
+
 <body>
-    <header>
-        <a href="home.html">
-            <img src="../images/melodinglogo.png" class="logo" alt="meloding" width="171" height="46"></a>
-    </header>
+  <header>
+    <a href="home.html">
+        <img src="../images/melodinglogo.png" class="logo" alt="meloding" width="171" height="46"></a>
+  </header>
 
-    <div class="navigation">
-        <a href="home.html"> HOME </a>
-        <div class="subnav">
-            <button class="subnavbtn"> MENU <i class="fa fa-caret-down"></i></button>
-            <div class="subnavcontent">
-                <a href="menu.html"> ITALIAN </a>
-                <a href="menu2.html"> KOREAN </a>
-                <a href="menu3.html"> JAPANESE</a>
-            </div>
-        </div>
-        <a href="review.html"> REVIEW </a>
+  <div class="navigation">
+      <a href="home.html"> HOME </a>
+      <div class="subnav">
+          <button class="subnavbtn"> MENU <i class="fa fa-caret-down"></i></button>
+          <div class="subnavcontent">
+              <a href="menu.html"> ITALIAN </a>
+              <a href="menu2.html"> KOREAN </a>
+              <a href="menu3.html"> JAPANESE</a>
+          </div>
+      </div>
+      <a href="review.html"> REVIEW </a>
+  </div>
+
+  <div class="bg"></div>
+  <div class="bg bg2"></div>
+  <div class="bg bg3"></div>
+
+  <h2 style="text-align:center">Italian Menu</h2>
+
+  <div class="container">
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+      <img src="../images/potatosoup.png" class="potatosoup" alt="potatosoup" width="300" height="300">
     </div>
 
-    <div>
-        <div class="dish1">
-            <div>
-                <img src="../images/potatosoup.png" class="potatosoup" alt="potatosoup" width="200" height="200">
-            </div>
-            <div class="text1">
-                Potato Créme Soup<br>
-                <br>
-                (Fresh cream, potato,<br>butter, flour)
-            </div>
-        </div>
-        <div class="dish2">
-            <div>
-                <img src="../images/caprese.png" class="caprese" alt="caprese" width="200" height="80">
-            </div>
-            <div class="text2">
-                Tomato Mozzarella Caprese<br>
-                <br>
-                (Tomato, mozzarella,<br>balsamiq vinegar, olive oil)
-            </div>
-        </div>
-        <div class="dish3">
-            <div>
-                <img src="../images/garnish.png" class="garnish" alt="garnish" width="200" height="80">
-            </div>
-            <div class="text3">
-                Vegetables Garnish<br>
-                <br>
-                (Mushroom, baby carrot,<br>baby potato, asparagus)
-            </div>
-        </div>
-        <div class="dish4">
-            <div>
-                <img src="../images/lasagna.png" class="lasagna" alt="lasagna" width="200" height="150">
-            </div>
-            <div class="text4">
-                Ragu Lasagna<br>
-                <br>
-                (Tomato sauce, beef, onion,<br>carrot, beef stock, mushrooms)
-            </div>
-        </div>
-        <div class="dish5">
-            <div>
-                <img src="../images/madeleine.png" class="madeleine" alt="madeleine" width="200" height="115">
-            </div>
-            <div class="text5">
-                Lemon/Chocolate Madeleine<br>
-                <br>
-                (Flour, lemon, sugar, egg,<br>baking powder, dark chocolate,<br>cocoa powder, milk, butter)
-            </div>
-        </div>
-        <div class="dish6">
-            <div class="text6">
-                <img src="../images/lemonade.png" class="lemonade" alt="lemonade" width="110" height="115">
-                <img src="../images/orangeade.png" class="orangeade" alt="orangeade" width="110" height="115">
-            </div>
-            <div class="text6">
-                Lemonade/Orageade<br>
-                <br>
-                (Lemon, orange, sparkling water)
-            </div>
-        </div>
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+      <img src="../images/caprese.png" class="caprese" alt="caprese" width="750" height="300">
     </div>
-    <br>
-    <br>
-    <br>
-    <footer class="flexbox2">
-        <div class="start">
-            <span>CONTACT<br></span>
-            <span><a href="mailto:myeunlee0323@gmail.com">myeunlee0323@gmail.com</a><br></span>
-            <span>copyright &copy; Meloding 2022</span>
-        </div>
-        <div class="middle">
-            <a href="https://www.instagram.com/myeunlee324/">
-                <img src="../images/instagram.png" class="instagram" alt="instagram" width="25" height="25"></a>
-            <a href="https://www.facebook.com/leemel323/">
-                <img src="../images/facebook.png" class="facebook" alt="facebook" width="25" height="25"></a>
-        </div>
-        <div class="end">
-            <a href="home.html">
-                <img src="../images/melodinglogo.png" class="melodinglogo" alt="melodinglogo" width="171" height="46"></a>
-        </div>
-    </footer>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+      <img src="../images/garnish.png" class="garnish" alt="garnish" width="750" height="300">
+    </div>
+      
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+      <img src="../images/lasagna.png" class="lasagna" alt="lasagna" width="412.5" height="300">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">5 / 6</div>
+      <img src="../images/madeleine.png" class="madeleine" alt="madeleine" width="487.5" height="300">
+    </div>
+      
+    <div class="mySlides">
+      <div class="numbertext">6 / 6</div>
+      <img src="../images/nobackade.png" class="ade" alt="lemonade and orangeade" width="487.5" height="300">
+    </div>
+      
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <div class="row">
+        <img class="demo cursor" src="../images/potatosoup.png" width="50" height="50" onclick="currentSlide(1)" alt="Potato Créme Soup<br>(Fresh cream, potato, butter, flour)">
+        <img class="demo cursor" src="../images/caprese.png" width="125" height="50" onclick="currentSlide(2)" alt="Tomato Mozzarella Caprese<br>(Tomato, mozzarella, balsamiq vinegar, olive oil)">
+        <img class="demo cursor" src="../images/garnish.png" width="125" height="50" onclick="currentSlide(3)" alt="Vegetables Garnish<br>(Mushroom, baby carrot, baby potato, asparagus)">
+        <img class="demo cursor" src="../images/lasagna.png" width="68.75" height="50" onclick="currentSlide(4)" alt="Ragu Lasagna<br>(Tomato sauce, beef, onion, carrot, beef stock, mushrooms)">
+        <img class="demo cursor" src="../images/madeleine.png" width="81.25" height="50" onclick="currentSlide(5)" alt="Lemon/Chocolate Madeleine<br>(Flour, lemon, sugar, egg, baking powder, dark chocolate, cocoa powder, milk, butter)">
+        <img class="demo cursor" src="../images/nobackade.png" width="81.25" height="50" onclick="currentSlide(6)" alt="Lemonade/Orangeade<br>(Lemon, orange, sparkling water)">
+    </div>
+  </div>
+
+  <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+      showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+      showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("demo");
+      let captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+      }
+  </script>
+  
+  <br>
+  <footer class="flexbox2">
+      <div class="start">
+          <span>CONTACT<br></span>
+          <span><a href="mailto:myeunlee0323@gmail.com">myeunlee0323@gmail.com</a><br></span>
+          <span>copyright &copy; Meloding 2022</span>
+      </div>
+      <div class="middle">
+          <a href="https://www.instagram.com/myeunlee324/">
+              <img src="../images/instagram.png" class="instagram" alt="instagram" width="25" height="25"></a>
+          <a href="https://www.facebook.com/leemel323/">
+              <img src="../images/facebook.png" class="facebook" alt="facebook" width="25" height="25"></a>
+      </div>
+      <div class="end">
+          <a href="home.html">
+              <img src="../images/melodinglogo.png" class="melodinglogo" alt="melodinglogo" width="171" height="46"></a>
+      </div>
+  </footer>
 </body>
 </html>

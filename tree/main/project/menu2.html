@@ -5,31 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="magnifierstyle.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheet.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&display=swap" rel="stylesheet">
     <title>Korean</title>
     <style>
-        .bg {
-            animation: slide 3s ease-in-out infinite alternate;
-            background-image: linear-gradient(-60deg, rgb(235, 230, 221) 40%, rgb(249, 167, 167) 30%, rgb(213, 216, 255) 30%);
-            bottom: 0;
-            left: -50%;
-            opacity: .5;
-            position: fixed;
-            right: -50%;
-            top: 0;
-            z-index: -1;
+        .koreandish {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
         }
-        .bg2 {
-            animation-direction: alternate-reverse;
-            animation-duration: 4s;
-        }
-        .bg3 {animation-duration: 5s;}
-        @keyframes slide {
-        0% {transform: translateX(-25%);}
-        100% {transform: translateX(25%);}
+        .text1 {
+            margin-top: auto;
+            margin-bottom: auto;
+            text-align: left;
         }
     </style>
 </head>
@@ -52,33 +42,27 @@
         <a href="review.html"> REVIEW </a>
     </div>
 
-    <div class="bg"></div>
-    <div class="bg bg2"></div>
-    <div class="bg bg3"></div>
-
     <div class="wrap">
-        <img class="target" src="../images/korean.png" alt="korean menu" data-zoom="2">
+        <img src="../images/korean.jpeg" class="korean" alt="korean" data-zoom= "3">
     </div>
-
-    <br>
-    <br>
-    
-    <p class="text1">
-        Normal Korean Meal<br><br><br>
-        Steamed White Korean Rice<br><br>
-        Spinach Soy Bean Paste Soup<br><br>
-        Stir-fried Spicy Pork<br><br>
-        Baked Pacific Saury<br><br>
-        Fresh Vegetables for Spicy Pork<br><br>
-        Side Dish (Kimchi, Stir-fried boiled fish cake, Rolled egg,<br><br>
-        Seasoned Bean Sprouts, Seasoned Spinach,<br><br>
-        Soy Sauce Braised Beef, Stir-fried Peanuts,<br><br>
-        Stir-fried Spicy Squid, Julienne Korean Radish Salad)
-    </p>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="magnifier.js"></script>
 
+    <div class="koreandish">
+        <div class="text1">
+            <i>Normal Korean Meal</i><br><br><br>
+            Steamed White Korean Rice<br><br>
+            Spinach Soy Bean Paste Soup<br><br>
+            Stir-fried Spicy Pork<br><br>
+            Baked Pacific Saury<br><br>
+            Fresh Vegetables for Spicy Pork<br><br>
+            Side Dish (Kimchi, Stir-fried boiled fish cake, Rolled egg,<br><br>
+            Seasoned Bean Sprouts, Seasoned Spinach, Soy Sauce Braised Beef<br><br>
+            Stir-fried Peanuts, Stir-fried Spicy Squid, Julienne Korean Radish Salad)
+        </div>
+    </div>
+    <br>
     <br>
     <br>
     <footer class="flexbox2">

@@ -5,24 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="magnifierstyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&display=swap" rel="stylesheet">
     <title>Japanese</title>
     <style>
-        .japanesedish {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
+        .bg {
+            animation: slide 3s ease-in-out infinite alternate;
+            background-image: linear-gradient(-60deg, rgb(246, 244, 241) 50%, rgb(249, 167, 167) 50%, rgb(231, 175, 175) 50%);
+            bottom: 0;
+            left: -50%;
+            opacity: .5;
+            position: fixed;
+            right: -50%;
+            top: 0;
+            z-index: -1;
         }
-        .japanese {
-            margin-top: 2em;
-            margin-bottom: 2em;
+        .bg2 {
+            animation-direction: alternate-reverse;
+            animation-duration: 4s;
         }
-        .text1 {
-            margin-top: auto;
-            margin-bottom: auto;
-            text-align: left;
+        .bg3 {animation-duration: 5s;}
+        @keyframes slide {
+        0% {transform: translateX(-25%);}
+        100% {transform: translateX(25%);}
         }
     </style>
 </head>
@@ -45,27 +52,34 @@
         <a href="review.html"> REVIEW </a>
     </div>
 
-    <div>
-        <div class="japanesedish">
-            <div>
-                <img src="../images/japanese.jpeg" class="japanese" alt="japanese" width="400" height="400">
-            </div>
-            <div class="text1">
-                <i>Japanese One Meal</i><br><br><br>
-                Fried Tofu Rice Balls<br><br>
-                Boiled Conch Sushi<br><br>
-                Grilled Egg Sushi<br><br>
-                Shrimp Sushi<br><br>
-                Tuna Sushi<br><br>
-                Salmon Sushi<br><br>
-                Flatfish Sushi<br><br>
-                Deep-fried Shrimp<br><br>
-                Mini-Udon<br><br>
-                Miso Soup
-            </div>
-        </div>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+
+    <div class="wrap">
+        <img class="target" src="../images/japanese.png" alt="japanese menu" data-zoom="2">
     </div>
+
     <br>
+    <br>
+
+    <p class="text1">
+        <i>Japanese One Meal</i><br><br><br>
+            Fried Tofu Rice Balls<br><br>
+            Boiled Conch Sushi<br><br>
+            Grilled Egg Sushi<br><br>
+            Shrimp Sushi<br><br>
+            Tuna Sushi<br><br>
+            Salmon Sushi<br><br>
+            Flatfish Sushi<br><br>
+            Deep-fried Shrimp<br><br>
+            Mini-Udon<br><br>
+            Miso Soup
+    </p>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="magnifier.js"></script>
+
     <br>
     <br>
     <footer class="flexbox2">
